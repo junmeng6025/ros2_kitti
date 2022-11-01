@@ -38,10 +38,19 @@ ros2_kitti
 └── README.md
 ```
 ### Build the workspace
-```bash
-cd ros2_kitti/colcon_ws
-colcon build
-```
+- use colcon build command to generate executable files automatically
+  ```bash
+  cd ros2_kitti/colcon_ws
+  colcon build
+  ```
+- after build, copy the folder `/data` in
+    ```bash
+    /src/kitti_ros2/yolov5
+    ```
+    to
+    ```bash
+    /install/kitti_ros2/lib/python3.8/site-packages/yolov5
+    ```
 ### Launch the nodes
 source the `setup.sh` to current terminal
 ```bash
