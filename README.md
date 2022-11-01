@@ -6,7 +6,7 @@
 - Visualize raw images and point cloud in ROS2
 - Implement **object detection** algorithm [YOLOv5](https://github.com/ultralytics/yolov5)
 - Implement **stereo depth estimation** algorithm SGBM
-## Pre-requests
+## Pre-requisites
 ### 1) Install ROS2
 - For ROS2 install follow the [official documentation](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)  
 ### 2) What if I have to install ROS2 with ROS already in my PC?
