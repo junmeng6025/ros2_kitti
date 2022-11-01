@@ -1,4 +1,4 @@
-# ROS2+KITTI:
+# ROS2 + KITTI:
 ## Objet detection & Stereo depth estimation
 ![ROS](https://img.shields.io/badge/ros2-galactic-blue)
 ![Ubuntu](https://img.shields.io/badge/ubuntu-20.04-blue)
