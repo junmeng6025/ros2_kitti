@@ -4,7 +4,7 @@
 ![Ubuntu](https://img.shields.io/badge/ubuntu-20.04-blue)
 ![Python](https://img.shields.io/badge/python-3.8-blue)
 - Visualize raw images and point cloud in ROS2
-- Implement **object detection** algorithm YOLOv5
+- Implement **object detection** algorithm [YOLOv5](https://github.com/ultralytics/yolov5)
 - Implement **stereo depth estimation** algorithm SGBM
 
 ***
