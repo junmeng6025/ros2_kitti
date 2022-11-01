@@ -11,7 +11,7 @@
 # Build and Run
 ### Clone the repository to local
 ```bash
-git clone git@github.com:junmeng6025/ros2_kitti.git
+git clone https://github.com/junmeng6025/ros2_kitti.git
 ```
 ### Download the KITTI dataset and extract. 
 The raw data should be organized as:
