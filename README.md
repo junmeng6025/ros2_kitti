@@ -8,12 +8,12 @@
 - Implement **stereo depth estimation** algorithm SGBM
 ## Pre-requests
 ### 1) Install ROS2
-For ROS2 install follow the [official documentation](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)  
+- For ROS2 install follow the [official documentation](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)  
 ### 2) What if I have to install ROS2 with ROS already in my PC?
 - Settings for [ROS2 coexistence with ROS](https://stackoverflow.com/questions/61333625/ros2-coexistence-with-ros#:~:text=Based%20on%20Shrijit%20Singh%20comment%2C).  
 ### 3) Check YOLOv5 requirements
-If you run into errors that claims missing some python libraries, please check `requirements.txt` in `/colcon_ws/src/kitti_ros2/yolov5`.  
-Or you can use `rosdep` to install dependencies automatically. (See below `Possible issues`)  
+- If you run into errors that claims missing some python libraries, please check `requirements.txt` in `/colcon_ws/src/kitti_ros2/yolov5`.  
+- Or you can use `rosdep` to install dependencies automatically. (See below `Possible issues`)  
 ***
 # Build and Run
 ### Clone the repository to local
