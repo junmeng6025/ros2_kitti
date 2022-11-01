@@ -66,3 +66,5 @@ There are two options, select one:
   ```bash
   ros2 launch kitti_ros2 kitti_stereo_detect.launch.py 
   ```
+# Modify and git push
+*To keep the repository light-weighted, delete YOLO model files such as `yolov5x.pt` in `colcon_ws/src/kitti_ros2/yolov5/` before git add. These would be automatically downloaded when launch for the first time.*
