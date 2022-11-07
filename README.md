@@ -7,7 +7,7 @@
 - Implement **object detection** algorithm [YOLOv5](https://github.com/ultralytics/yolov5)
 - Implement **stereo depth estimation** algorithm SGBM
 ## Pre-requisites
-### 1) Install ROS2
+### 1) Install ROS2-galactic
 - For ROS2 install follow the [official documentation](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)  
 ### 2) What if I have to install ROS2 with ROS already in my PC?
 - Settings for [ROS2 coexistence with ROS](https://stackoverflow.com/questions/61333625/ros2-coexistence-with-ros#:~:text=Based%20on%20Shrijit%20Singh%20comment%2C).  
@@ -21,7 +21,10 @@
 git clone https://github.com/junmeng6025/ros2_kitti.git
 ```
 ### Download the KITTI dataset and extract. 
-The raw data should be organized as:
+TO download dataset you need to register and login first  
+`rawdata` [download](https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0005/2011_09_26_drive_0005_sync.zip)  
+`tracking data` [download](https://s3.eu-central-1.amazonaws.com/avg-kitti/data_tracking_label_2.zip)  
+The data files should be organized as:
 ```bash
 ros2_kitti
 ├── colcon_ws
