@@ -27,7 +27,7 @@ print("ROOT 2: ", ROOT)  # .
 
 class Yolov5Detector:
     def __init__(self,
-                 classesYaml=ROOT / 'data/coco128.yaml',  # all classes
+                 classesYaml=ROOT / 'data/kitti.yaml',  # all classes
                  device='cuda:0',  # cuda device, i.e. 0 or 0,1,2,3 or cpu
                  weights=ROOT / 'yolov5s.pt',  # model.pt path(s)
                  imgsz=(375, 1242),  # inference size (height, width)

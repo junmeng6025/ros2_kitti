@@ -34,6 +34,7 @@ setup(
             'kitti_node=kitti_ros2.node_kitti:main',
             'stereo_node=kitti_ros2.node_stereo:main',
             'stereo_detect_node=kitti_ros2.node_stereo_detect:main',
+            'detect_node=kitti_ros2.node_detect:main',
         ],
     },
 )

@@ -11,6 +11,8 @@ from std_msgs.msg import String
 
 from kitti_ros2.utils_data import *
 from kitti_ros2.utils_publish import *
+from kitti_ros2.utils_kitti import *
+from pathlib import Path
 
 QUEUE_SZ = 1
 FPS = 10.0
@@ -22,13 +24,17 @@ MAXFRAME_MATCH = {'0009': 447,
                   '0002': 77,
                   '0057': 361}
 
-ROOT = '/home/jun/ros_kitti'
+ROOT = str(Path(Path.cwd()).parent)
 DATA_PATH = ROOT+'/rawdata/2011_09_26/2011_09_26_drive_'+DATAID+'_sync/'
 
 IMG_CHN = {'l_gray': 'image_00',
            'r_gray': 'image_01',
            'l_RGB': 'image_02',
            'r_RGB': 'image_03'}
+
+DF_TRACKING = read_tracking(ROOT, DATAID)
+CALIB = Calibration(ROOT+'/rawdata/2011_09_26/', from_video=True)
+# utils_kitti
 
 
 class KittiNode(Node):
@@ -64,6 +70,19 @@ class KittiNode(Node):
         self.pcd_pub = self.create_publisher(
             PointCloud2, 'kitti_pcd', QUEUE_SZ)
 
+        # publisher ego FOV & BBox
+        self.egoFOV_pub = self.create_publisher(
+            Marker, 'kitti_egoFOV', QUEUE_SZ)
+        self.egoBBox_pub = self.create_publisher(
+            MarkerArray, 'kitti_egoBBox', QUEUE_SZ)
+
+        # publisher BBox & distance
+        self.BBox_pub = self.create_publisher(
+            MarkerArray, 'kitti_BBox', QUEUE_SZ)
+        self.dist_pub = self.create_publisher(
+            MarkerArray, 'kitti_distance', QUEUE_SZ)
+
+        # timer callback
         self.timer = self.create_timer(
             timer_period_sec=1/FPS, callback=self.timer_callback)
 
@@ -81,11 +100,35 @@ class KittiNode(Node):
         publish_img(self.img_pubR0, self.cv_bridge, img_R0)
 
         # point cloud
+        # PCL
         # pcl = read_pcl(DATA_PATH, self.frame)
         # publish_pcl(self.pcl_pub, pcl)
 
+        # PCD
         pcd = read_pcd(DATA_PATH, self.frame)
         publish_pcd(self.pcd_pub, pcd)
+
+        # EgoCar
+        publish_egoFOV(self.egoFOV_pub)
+        publish_egoBBox(self.egoBBox_pub)
+
+        # 3D BBox
+        df_tracking_frame = DF_TRACKING[DF_TRACKING.frame == self.frame]
+        bbox3d_ls = np.array(df_tracking_frame[[
+                             'height', 'width', 'length', 'pos_x', 'pos_y', 'pos_z', 'rot_y']])
+        trackID_ls = np.array(df_tracking_frame['track_id'])
+        type_ls = np.array(df_tracking_frame['type'])
+        corners_bbox3d_velo_list, centers_dict, minPQDs = read_3d_bbox(
+            trackID_ls, bbox3d_ls, CALIB)
+        publish_3d_bbox(self.BBox_pub,
+                        corners_bbox3d_velo_list,
+                        obj_types=type_ls,
+                        track_IDs=trackID_ls,
+                        lifetime=1/FPS)
+
+        publish_distance(self.dist_pub,
+                         minPQDs,
+                         lifetime=1/FPS)
 
         # frame_id
         publish_frame(self.frame_pub, self.frame)

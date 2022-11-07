@@ -16,10 +16,10 @@ def generate_launch_description():              # 自动生成launch文件的函
             package='kitti_ros2',               # 节点所在的功能包
             executable='kitti_node',            # 节点的可执行文件
         ),
-        Node(                                   # 配置一个节点的启动
-            package='kitti_ros2',               # 节点所在的功能包
-            executable='stereo_node',           # 节点的可执行文件名
-        ),
+        # Node(                                   # 配置一个节点的启动
+        #     package='kitti_ros2',               # 节点所在的功能包
+        #     executable='stereo_node',           # 节点的可执行文件名
+        # ),
         Node(                                   # 配置一个节点的启动
             package='rviz2',                    # 节点所在的功能包
             executable='rviz2',                 # 节点的可执行文件名
