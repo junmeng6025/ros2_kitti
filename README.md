@@ -12,8 +12,8 @@
 ## Pre-requisites
 ### 1) Install ROS2-galactic
 - For ROS2 install follow the [official documentation](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)  
-### 2) What if I have to install ROS2 with ROS already in my PC?
-- Settings for [ROS2 coexistence with ROS](https://stackoverflow.com/questions/61333625/ros2-coexistence-with-ros#:~:text=Based%20on%20Shrijit%20Singh%20comment%2C).  
+### 2) What if I have to install ROS2 with ROS1 already in my PC?
+- Settings for [ROS2 coexistence with ROS1](https://stackoverflow.com/questions/61333625/ros2-coexistence-with-ros#:~:text=Based%20on%20Shrijit%20Singh%20comment%2C).  
 ### 3) Check YOLOv5 requirements
 - If you run into errors that claims missing some python libraries, please check `requirements.txt` in `/colcon_ws/src/kitti_ros2/yolov5`.  
 - Or you can use `rosdep` to install dependencies automatically. (See below `Possible issues`)  
@@ -111,8 +111,8 @@ To keep the repository light-weighted:
 - The model files like `yolov5x.pt` would be automatically downloaded to /install when launch for the first time.  
 ***
 # Possible issues:
-### 1) Coexist ROS and ROS2
-Settings for [ROS2 coexistence with ROS](https://stackoverflow.com/questions/61333625/ros2-coexistence-with-ros#:~:text=Based%20on%20Shrijit%20Singh%20comment%2C).  
+### 1) Coexist ROS1 and ROS2
+Settings for [ROS2 coexistence with ROS1](https://stackoverflow.com/questions/61333625/ros2-coexistence-with-ros#:~:text=Based%20on%20Shrijit%20Singh%20comment%2C).  
 ### 2) Use `rosdep` or `rosdepc` ('c' for Chinese)
 `rosdepc` is a tool that can help to install all the dependencies for a workspace automatically.  
 #### install and initialize rosdepc
