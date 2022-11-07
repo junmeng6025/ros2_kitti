@@ -5,8 +5,8 @@
 ![Python](https://img.shields.io/badge/python-3.8-blue)
 - Visualize raw images and point cloud in ROS2
 - Implement **object detection** algorithm YOLOv5
-- Implement **stereo depth estimation** algorithm SGBM
-<img src = "README/kitti_ros2_rviz2.png>
+- Implement **stereo depth estimation** algorithm SGBM  
+<img src = "README/kitti_ros2_rviz2.png">
 ***
 ## Pre-requisites
 ### 1) Install ROS2-galactic
