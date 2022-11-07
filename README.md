@@ -84,7 +84,7 @@ source install/setup.sh
 ros2 launch kitti_ros2 kitti_stereo_detect.launch.py 
 ```
 
-There are another two options:
+There are two other options:
 - **B:**  Visualize KITTI data in Rviz **without** detection or depth estimation
   ```bash
   ros2 launch kitti_ros2 kitti_visualization.launch.py
