@@ -16,6 +16,7 @@
 ### 3) Check YOLOv5 requirements
 - If you run into errors that claims missing some python libraries, please check `requirements.txt` in `/colcon_ws/src/kitti_ros2/yolov5`.  
 - Or you can use `rosdep` to install dependencies automatically. (See below `Possible issues`)  
+- Or install the missing libraries according to the error messages ...
 ***
 # Build and Run
 ### Clone the repository to local
@@ -24,8 +25,8 @@ git clone https://github.com/junmeng6025/ros2_kitti.git
 ```
 ### Download KITTI dataset and extract
 TO download dataset you need to register and login first  
-`rawdata` [download](https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0005/2011_09_26_drive_0005_sync.zip)  
-`tracking data` [download](https://s3.eu-central-1.amazonaws.com/avg-kitti/data_tracking_label_2.zip)  
+- `rawdata` [download](https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0005/2011_09_26_drive_0005_sync.zip)  
+- `tracking data` [download](https://s3.eu-central-1.amazonaws.com/avg-kitti/data_tracking_label_2.zip)  
 The data files should be organized as:
 ```bash
 ros2_kitti
@@ -94,7 +95,9 @@ There are two other options:
   ros2 launch kitti_ros2 kitti_detect.launch.py 
   ```
 # Modify and git push
-To keep the repository light-weighted, delete YOLO model files such as `yolov5x.pt` in `colcon_ws/src/kitti_ros2/yolov5/` before git add. These model files would be automatically downloaded when launch for the first time.  
+To keep the repository light-weighted:  
+- always delete `/build`, `/log` and `/install` folders before git add, i.e. only commit `/src`.
+- The model files like `yolov5x.pt` would be automatically downloaded to /install when launch for the first time.  
 ***
 # Possible issues:
 ### 1) Coexist ROS and ROS2
