@@ -60,7 +60,9 @@ ros2_kitti
 - use colcon build command to generate executable files automatically
   ```bash
   cd ros2_kitti/colcon_ws
-  # ALWAYS make sure you've sourced ROS2 to your current terminal before "colcon build"
+  ```
+  ! ALWAYS make sure you've sourced ROS2 to your current terminal before "colcon build"
+  ```bash
   source /opt/ros/galactic/setup.bash
   colcon build
   ```
