@@ -27,7 +27,7 @@ ros2_kitti
 ├── colcon_ws
 │   └──...
 │
-├──rawdata #----------------------------- create this folder yourself
+├── rawdata #------------------------------ create this folder yourself
 │   ├── 2011_09_26
 │   │   ├── 2011_09_26_drive_0005_sync
 │   │   │   ├── image_00
@@ -40,8 +40,14 @@ ros2_kitti
 │   │   ├── calib_imu_to_velo.txt
 │   │   └── calib_velo_to_cam.txt
 │   │
-│   ├── 2011_09_26_calib.zip #----------- download from KITTI website
-│   └── 2011_09_26_drive_0005_sync.zip #- download from KITTI website
+│   ├── 2011_09_26_calib.zip #------------ download from KITTI website
+│   └── 2011_09_26_drive_0005_sync.zip #-- download from KITTI website
+│
+├── data_tracking_label_2
+│   └── training
+│       └── label_02     # tracking data ID not relevant to rawdata ID
+│           ├── 0000.txt # e.g. '0000.txt' here matches with rawdata '2011_09_26_drive_0005'
+│           └── ...      # you have to MATCH them by YOURSELF
 │
 └── README.md
 ```
