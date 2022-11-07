@@ -8,7 +8,6 @@
 - Implement **stereo depth estimation** algorithm SGBM  
 <img src = "README/kitti_ros2_rviz2.png" width = 600>  
 
-
 ***
 ## Pre-requisites
 ### 1) Install ROS2-galactic
@@ -28,13 +27,19 @@ git clone https://github.com/junmeng6025/ros2_kitti.git
 ### Download KITTI dataset and extract
 TO download dataset you need to register and login first  
 - `rawdata` [download](https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0005/2011_09_26_drive_0005_sync.zip)  
-  <img src="README/kitti_download_guide00.png" width = 250>
-  
-  
-  <img src="README/kitti_download_guide01.png" width = 250>
-  
+  <p float="left">
+    <img src="README/kitti_download_guide00.png" width="300" />
+    <img src="README/kitti_download_guide01.png" width="300" /> 
+    <img src="/img3.png" width="100" />
+  </p>
   
 - `tracking data` [download](https://s3.eu-central-1.amazonaws.com/avg-kitti/data_tracking_label_2.zip)  
+  <p float="left">
+    <img src="README/kitti_download_guide02.png" width="300" />
+    <img src="README/kitti_download_guide03.png" width="300" /> 
+    <img src="/img3.png" width="100" />
+  </p>
+  
 The data files should be organized as:
 ```bash
 ros2_kitti
