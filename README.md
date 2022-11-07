@@ -6,7 +6,7 @@
 - Visualize raw images and point cloud in ROS2
 - Implement **object detection** algorithm YOLOv5
 - Implement **stereo depth estimation** algorithm SGBM  
-<img src = "README/kitti_ros2_rviz2.png" width = 600>  
+<img src = "README/kitti_ros2_rviz2.png">  
 
 ***
 ## Pre-requisites
@@ -30,14 +30,12 @@ TO download dataset you need to register and login first
   <p float="left">
     <img src="README/kitti_download_guide00.png" width="300" />
     <img src="README/kitti_download_guide01.png" width="300" /> 
-    <img src="/img3.png" width="100" />
   </p>
   
 - `tracking data` [download](https://s3.eu-central-1.amazonaws.com/avg-kitti/data_tracking_label_2.zip)  
   <p float="left">
     <img src="README/kitti_download_guide02.png" width="300" />
     <img src="README/kitti_download_guide03.png" width="300" /> 
-    <img src="/img3.png" width="100" />
   </p>
   
 The data files should be organized as:
