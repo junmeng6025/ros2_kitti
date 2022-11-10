@@ -78,6 +78,7 @@ ros2_kitti
   source /opt/ros/galactic/setup.bash
   colcon build
   ```
+  > use the command `echo ${ROS_DISTRO}` to check the current ROS distro in your working Terminal  
 - after build, copy the folder `/data` in
     ```bash
     /src/kitti_ros2/yolov5
