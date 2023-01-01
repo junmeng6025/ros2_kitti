@@ -15,9 +15,10 @@ import torch
 from yolov5 import detect_ros
 from kitti_ros2.utils_publish import *
 from kitti_ros2.utils_detect import *
+from interface.msg import YoloLabel, StereoLabel
 
 QUEUE_SZ = 1
-RATE = 0.1
+RATE = 1.0/10
 DETECT_TOPIC = '/kitti_imgraw_L/RGB'
 
 
@@ -35,9 +36,8 @@ class DetectNode(Node):
 
         self.detector = detect_ros.Yolov5Detector()
         self.labels = []
-        # self.yoloLabel = YoloLabel()
-        # self.yoloLabel_pub = self.create_publisher(
-        #     YoloLabel, 'yolo_label', QUEUE_SZ)
+        self.yoloLabel_pub = self.create_publisher(
+            YoloLabel, 'detect_labels', QUEUE_SZ)
         self.imgDetect_pub = self.create_publisher(
             Image, DETECT_TOPIC+'_detect', QUEUE_SZ)
 
@@ -64,25 +64,25 @@ class DetectNode(Node):
         publish_img(self.imgDetect_pub, self.cv_bridge, cvImgRet)
 
         self.labels = detect
-        # # label syntax:
-        # # [
-        # #  [x, y, w, h, conf, cls],
-        # #  [x, y, w, h, conf, cls],
-        # #  [x, y, w, h, conf, cls],
-        # #  ...
-        # # ]
+        # self.get_logger().info(self.labels)
+        # label syntax:
+        # array[
+        #  [x, y, w, h, conf, cls],
+        #  [x, y, w, h, conf, cls],
+        #  [x, y, w, h, conf, cls],
+        #  ...
+        # ]
+        self.yoloLabel = YoloLabel()
+        for label in self.labels:
+            # self.get_logger().info(label)
+            self.yoloLabel.labels_x.append(int(label[0]))
+            self.yoloLabel.labels_y.append(int(label[1]))
+            self.yoloLabel.labels_w.append(int(label[2]))
+            self.yoloLabel.labels_h.append(int(label[3]))
+            self.yoloLabel.labels_conf.append(label[4])
+            self.yoloLabel.labels_cls.append(int(label[5]))
 
-        # self.yoloLabel.x = detect[:, 0]
-        # self.yoloLabel.y = detect[:, 1]
-        # self.yoloLabel.w = detect[:, 2]
-        # self.yoloLabel.h = detect[:, 3]
-        # self.yoloLabel.conf = detect[:, 4]
-        # self.yoloLabel.cls = detect[:, 5]
-        # img_objdetect_dist = drawLabel_detect_and_distance(
-        #     cvImage, self.labels, self.deptharr)
-        # publish_img(self.imgDetecteDistance_pub,
-        #             self.cv_bridge,
-        #             img_objdetect_dist)
+        self.yoloLabel_pub.publish(self.yoloLabel)
 
 
 def main(args=None):

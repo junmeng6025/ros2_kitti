@@ -21,8 +21,8 @@ from kitti_ros2.utils_publish import *
 from kitti_ros2.utils_detect import *
 import kitti_ros2.utils_stereo as utils_stereo
 
-QUEUE_SZ = 1
-RATE = 0.1
+QUEUE_SZ = 5
+RATE = 1.0/10
 DETECT_TOPIC = '/kitti_imgraw_L/RGB'
 
 

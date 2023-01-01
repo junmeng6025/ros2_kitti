@@ -19,8 +19,8 @@ import numpy as np
 
 FRAME_ID = "map"
 QUEUE_SZ = 10
-FPS = 10
-LIFETIME = 1.0/FPS
+FPS = 10.0
+LIFETIME = 2.0/FPS
 
 DETECTION_COLOR_MAP = {
     'Vehicle': (255, 255, 0),

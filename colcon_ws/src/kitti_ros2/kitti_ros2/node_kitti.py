@@ -14,7 +14,7 @@ from kitti_ros2.utils_publish import *
 from kitti_ros2.utils_kitti import *
 from pathlib import Path
 
-QUEUE_SZ = 1
+QUEUE_SZ = 5
 FPS = 10.0
 
 DATAID = '0005'  # string of 4 digits

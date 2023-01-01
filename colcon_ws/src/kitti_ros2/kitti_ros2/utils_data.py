@@ -104,7 +104,6 @@ def read_3d_bbox(track_id_ls, bbox3d_ls, calib):
         corners_bbox3d_cam2 = compute_3d_box_cam2(*bbox3d)  # in bbox_utils.py
         corners_bbox3d_velo = calib.project_rect_to_velo(
             corners_bbox3d_cam2.T)  # here no need another .T, we get a 8x3 array
-        # equivalent to .append()
         corners_bbox3d_velo_list += [corners_bbox3d_velo]
 
         # track
@@ -114,15 +113,6 @@ def read_3d_bbox(track_id_ls, bbox3d_ls, calib):
         # distance calc
         minPQDs += [min_distance_cuboids(BBOX_EGO, corners_bbox3d_velo)]
 
-    # corners_bbox3d_velo_list += [BBOX_EGO]
-    # track_id_ls = np.append(track_id_ls, -1)
-    # type_ls = np.append(type_ls, 'Vehicle')
-
-    centers_dict[-1] = np.array([0, 0])  # record the ego_car as track_id = -1
-    # In kitti_run.py:
-    # ego_car = Object(center=np.array([0, 0]))
-    # ...
-    # for track_id in centers_dict:
-    #             trackers[track_id] = Object(centers_dict[track_id])
+    centers_dict[-1] = np.array([0, 0])
 
     return corners_bbox3d_velo_list, centers_dict, minPQDs
