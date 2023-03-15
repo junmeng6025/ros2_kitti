@@ -13,8 +13,16 @@
 ### 1) Install ROS2-galactic
 - For ROS2 install follow the [official documentation](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)  
 ### 2) What if I have to install ROS2 with ROS1 already in my PC?
-- Settings for [ROS2 coexistence with ROS1](https://stackoverflow.com/questions/61333625/ros2-coexistence-with-ros#:~:text=Based%20on%20Shrijit%20Singh%20comment%2C).  
-### 3) Install libiaries in YOLOv5 requirements
+- Settings for [ROS2 coexistence with ROS1](https://stackoverflow.com/questions/61333625/ros2-coexistence-with-ros#:~:text=Based%20on%20Shrijit%20Singh%20comment%2C). 
+<br>
+
+***
+# Build and Run
+### Clone the repository to local
+```bash
+git clone https://github.com/junmeng6025/ros2_kitti.git
+```
+### Install libiaries for YOLOv5
 ```bash
 cd ros2_kitti
 pip install -r requirements.txt
@@ -23,12 +31,6 @@ pip install -r requirements.txt
 - If you run into errors that claims missing some python libraries, please check `requirements.txt` in `/colcon_ws/src/kitti_ros2/yolov5`.  
 - Or you can use `rosdep` to install dependencies automatically. (See below `Possible issues`)  
 - Or install the missing libraries according to the error messages ...
-***
-# Build and Run
-### Clone the repository to local
-```bash
-git clone https://github.com/junmeng6025/ros2_kitti.git
-```
 ### Download KITTI dataset and extract
 TO download dataset you need to register and login first  
 - `rawdata` [download](https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0005/2011_09_26_drive_0005_sync.zip)  
