@@ -12,8 +12,8 @@
 ## Prerequisitions
 ### 1) Install ROS2-galactic
 - For ROS2 install follow the [official documentation](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)  
-  >What if I have to install ROS2 with ROS1 already in my PC?  
-  Settings for [ROS2 coexistence with ROS1](https://stackoverflow.com/questions/61333625/ros2-coexistence-with-ros#:~:text=Based%20on%20Shrijit%20Singh%20comment%2C). 
+  >**What if I have to install ROS2 with ROS1 already in my PC?**  
+  $\to$ Settings for [ROS2 coexistence with ROS1](https://stackoverflow.com/questions/61333625/ros2-coexistence-with-ros#:~:text=Based%20on%20Shrijit%20Singh%20comment%2C). 
 
 <br>
 
