@@ -28,14 +28,14 @@ git clone https://github.com/junmeng6025/ros2_kitti.git
 TO download dataset you need to register and login first  
 - `rawdata` [download](https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0005/2011_09_26_drive_0005_sync.zip)  
   <p float="left">
-    <img src="README/kitti_download_guide00.png" width="300" />
-    <img src="README/kitti_download_guide01.png" width="300" /> 
+    <img src="README/kitti_download_guide00.png" height="250" />
+    <img src="README/kitti_download_guide01.png" height="250" /> 
   </p>
   
 - `tracking data` [download](https://s3.eu-central-1.amazonaws.com/avg-kitti/data_tracking_label_2.zip)  
   <p float="left">
-    <img src="README/kitti_download_guide02.png" width="300" />
-    <img src="README/kitti_download_guide03.png" width="300" /> 
+    <img src="README/kitti_download_guide02.png" height="300" />
+    <img src="README/kitti_download_guide03.png" height="300" /> 
   </p>
   
 The data files should be organized as:
