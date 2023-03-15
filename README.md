@@ -115,10 +115,7 @@ There are two other options:
   ```bash
   ros2 launch kitti_ros2 kitti_detect.launch.py 
   ```
-# Modify and git push
-To keep the repository light-weighted:  
-- always delete `/build`, `/log` and `/install` folders before git add, i.e. only commit `/src`.
-- The model files like `yolov5x.pt` would be automatically downloaded to /install when launch for the first time.  
+
 ***
 # Possible issues:
 ### 1) Coexist ROS1 and ROS2
