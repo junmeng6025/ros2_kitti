@@ -1,0 +1,7 @@
+# Exclude generated folders from `colcon build`
+build
+install
+log
+
+# Exclude YOLOv5 model
+*.pt
