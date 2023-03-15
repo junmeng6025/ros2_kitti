@@ -15,6 +15,11 @@
 ### 2) What if I have to install ROS2 with ROS1 already in my PC?
 - Settings for [ROS2 coexistence with ROS1](https://stackoverflow.com/questions/61333625/ros2-coexistence-with-ros#:~:text=Based%20on%20Shrijit%20Singh%20comment%2C).  
 ### 3) Check YOLOv5 requirements
+```bash
+cd ros2_kitti
+pip install -r requirements.txt
+```
+
 - If you run into errors that claims missing some python libraries, please check `requirements.txt` in `/colcon_ws/src/kitti_ros2/yolov5`.  
 - Or you can use `rosdep` to install dependencies automatically. (See below `Possible issues`)  
 - Or install the missing libraries according to the error messages ...
