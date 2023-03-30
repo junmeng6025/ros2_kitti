@@ -9,7 +9,11 @@
 <div align="center">
   <img src = "README/kitti_ros2_rviz2.png">  
   Visualization  
-</div>  
+</div> 
+
+<br>
+
+***
 
 <div align="center">
   <img src = "README/schematic.png">  
