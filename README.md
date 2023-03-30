@@ -6,14 +6,15 @@
 - Visualize raw images and point cloud in ROS2
 - Implement **object detection** algorithm YOLOv5
 - Implement **stereo depth estimation** algorithm SGBM  
-<p float="center">
+<div align="center">
   <img src = "README/kitti_ros2_rviz2.png">  
   Visualization  
-</p>
-<p float="center">
+</div>  
+
+<div align="center">
   <img src = "README/schematic.png">  
   Software pipeline  
-</p>
+</div>
 
 ***
 ## Prerequisitions
