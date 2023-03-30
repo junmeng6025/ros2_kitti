@@ -13,8 +13,6 @@
 
 <br>
 
-***
-
 <div align="center">
   <img src = "README/schematic.png">  
   Software pipeline  
