@@ -7,14 +7,14 @@
 - Implement **object detection** algorithm YOLOv5
 - Implement **stereo depth estimation** algorithm SGBM  
 <div align="center">
-  <img src = "README/kitti_ros2_rviz2.png">  
+  <img src = "README/kitti_ros2_rviz2.png"><br>  
   Visualization  
 </div> 
 
 <br>
 
 <div align="center">
-  <img src = "README/schematic.png" width = 600>  
+  <img src = "README/schematic.png"><br>  
   Software pipeline  
 </div>
 
