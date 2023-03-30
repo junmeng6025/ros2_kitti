@@ -14,7 +14,7 @@
 <br>
 
 <div align="center">
-  <img src = "README/schematic.png">  
+  <img src = "README/schematic.png" width = 600>  
   Software pipeline  
 </div>
 
