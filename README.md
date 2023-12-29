@@ -20,6 +20,12 @@
   >**What if I have to install ROS2 with ROS1 already in my PC?**  
   $\to$ Settings for [ROS2 coexistence with ROS1](https://stackoverflow.com/questions/61333625/ros2-coexistence-with-ros#:~:text=Based%20on%20Shrijit%20Singh%20comment%2C). 
 
+- Install `tf-transformations`
+
+  ```bash
+  sudo apt-get install ros-galactic-tf-transformations
+  ```
+  for other ros2 distors substitude the `galactic` with your distro name
 <br>
 
 ***
