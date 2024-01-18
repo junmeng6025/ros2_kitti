@@ -11,9 +11,17 @@
   Visualization  
 </div> 
 
-<br>
+### Software pipeline
 
-***
+<div align="center">
+  <img src = "README/schematic.png"><br>  
+  Software pipeline  
+</div>
+
+<br>
+<br>  
+
+
 ## Prerequisitions
 ### Install ROS2-galactic
 - For ROS2 install follow the [official documentation](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)  
@@ -84,12 +92,6 @@ There are two other options:
   ```bash
   ros2 launch kitti_ros2 kitti_detect.launch.py 
   ```
-
-
-<div align="center">
-  <img src = "README/schematic.png"><br>  
-  Software pipeline  
-</div>
 
 ***
 # Possible issues:
